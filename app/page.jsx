@@ -1,3 +1,5 @@
+'use client'
+
 import Image from 'next/image';
 import ProductCard from '@/components/prodcard';
 import { stripe } from '@/utils/stripe';
@@ -10,15 +12,16 @@ export default async function page() {
   const products = inventory.data.map((product) => {
     const price = product.default_price || {}; // Set default value as an empty object if default_price is null
     return {
-      currency: price.currency || '',
+      currency: price.currency,
       id: product.id,
       name: product.name,
-      price: price.unit_amount || 0,
+      price: price.unit_amount || 2200,
       image: product.images[0] || null,
     };
   });
 
   return (
+
     <div className='min-h-screen flex flex-col'>
       <main className='flex-grow bg-[#f7f7f7]'>
         <div className='container xl:max-w-screen-xl mx-auto py-12 px-6'>
