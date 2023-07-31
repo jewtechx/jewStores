@@ -1,4 +1,4 @@
-'use client'
+"use client"
 import './globals.css'
 import Headerr from '@/components/headerr'
 import Footerr from '@/components/footerr'
@@ -11,10 +11,10 @@ const secretKeys = require('../secrets')
 //   weight:'400'
 // })
 
-export const metadata = {
-  title: 'JewStore',
-  description: 'Your reliable source of assert',
-}
+// export const metadata = {
+//   title: 'JewStore',
+//   description: 'Your reliable source of assert',
+// }
 
 export default function RootLayout({
   children,

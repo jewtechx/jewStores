@@ -1,5 +1,4 @@
 'use client'
-
 import Image from 'next/image';
 import ProductCard from '@/components/prodcard';
 import { stripe } from '@/utils/stripe';
@@ -37,6 +36,6 @@ export default async function page() {
 }
 
 
-export async function getStaticProps(){
+// export async function getStaticProps(){
      
-}
+// }
